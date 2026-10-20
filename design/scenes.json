@@ -1,0 +1,7134 @@
+[
+ {
+  "id": "01_grenier_malles",
+  "room": "Grenier",
+  "name": "Les malles oubliées",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "text",
+    "rect": [
+     200,
+     60,
+     2300,
+     130
+    ],
+    "label": "sloping wooden roof, dusty, moonlit",
+    "size": 30
+   },
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 700,
+    "y": 820,
+    "label": "trunk lid"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     80,
+     838,
+     700,
+     1010
+    ],
+    "label": "old trunk",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 760,
+    "x2": 1380,
+    "y": 600,
+    "label": "trunk lid"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     760,
+     618,
+     1380,
+     1010
+    ],
+    "label": "big trunk with board games",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1440,
+    "x2": 2050,
+    "y": 420,
+    "label": "suitcase"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1440,
+     438,
+     2050,
+     1010
+    ],
+    "label": "stacked suitcases",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 2100,
+    "x2": 2460,
+    "y": 700,
+    "label": "crate"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2100,
+     718,
+     2460,
+     1010
+    ],
+    "label": "crate",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     700,
+     820
+    ],
+    "to": [
+     760,
+     600
+    ],
+    "label": "leaning ruler",
+    "steps": 4
+   },
+   {
+    "kind": "ladder",
+    "x": 1410,
+    "top": 420,
+    "bottom": 600,
+    "label": "ribbon"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     300,
+     700,
+     460,
+     820
+    ],
+    "label": "dust ball",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     900,
+     470,
+     1100,
+     600
+    ],
+    "label": "open lid cave",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1700,
+     250,
+     1820,
+     420
+    ],
+    "label": "forgotten game box",
+    "size": 20
+   },
+   {
+    "kind": "light",
+    "at": [
+     1900,
+     180
+    ],
+    "label": "moonlight from round window",
+    "r": 40,
+    "cone": [
+     420,
+     180
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     80,
+     140,
+     700,
+     800
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     160,
+     760
+    ],
+    "dir": "down",
+    "label": "trapdoor to mezzanine"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "02_mezzanine_livres_rares",
+  "room": "Mezzanine",
+  "name": "Les vitrines des livres rares",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "door",
+    "rect": [
+     120,
+     90,
+     230,
+     250
+    ],
+    "label": "rare book (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     560,
+     320,
+     670,
+     490
+    ],
+    "label": "chained book",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     980,
+     90,
+     1090,
+     250
+    ],
+    "label": "rare book (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1300,
+     550,
+     1420,
+     730
+    ],
+    "label": "glowing open book",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1800,
+     320,
+     1910,
+     490
+    ],
+    "label": "rare book (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     2200,
+     90,
+     2310,
+     250
+    ],
+    "label": "rare book (door)",
+    "size": 20
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     300,
+     620,
+     520,
+     730
+    ],
+    "label": "velvet cushion",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1900,
+     640,
+     2100,
+     730
+    ],
+    "label": "brass lock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 800,
+    "top": 250,
+    "bottom": 490,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 1620,
+    "top": 490,
+    "bottom": 730,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 250,
+    "top": 730,
+    "bottom": 960,
+    "label": "ladder"
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     300
+    ],
+    "label": "green banker lamp",
+    "r": 26,
+    "cone": [
+     490,
+     320
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     40,
+     500,
+     840,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     1680,
+     60,
+     2480,
+     480
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     2250,
+     840,
+     2440,
+     960
+    ],
+    "label": "behind velvet cushion",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2440,
+     900
+    ],
+    "dir": "right",
+    "label": "to grand staircase"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      100,
+      70
+     ],
+     [
+      600,
+      70
+     ],
+     [
+      1100,
+      70
+     ],
+     [
+      1600,
+      70
+     ],
+     [
+      2100,
+      70
+     ]
+    ],
+    "w": 170,
+    "label": "carved balustrade (foreground)"
+   }
+  ]
+ },
+ {
+  "id": "03_mezzanine_lutrin_registro",
+  "room": "Mezzanine",
+  "name": "Le lutrin du Registro",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "special",
+    "rect": [
+     560,
+     120,
+     1360,
+     640
+    ],
+    "label": "open giant ledger: two curved pages with glowing purple handwriting",
+    "size": 30,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1250,
+     10,
+     1330,
+     110
+    ],
+    "label": "floating quill",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1460,
+     220,
+     1600,
+     640
+    ],
+    "label": "candle holder",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     700,
+     640,
+     780,
+     900
+    ],
+    "label": "red ribbon bookmark",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1530,
+     200
+    ],
+    "label": "candle flame",
+    "r": 26
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      80,
+      1060
+     ],
+     [
+      1840,
+      1060
+     ],
+     [
+      1600,
+      760
+     ],
+     [
+      320,
+      760
+     ]
+    ],
+    "label": "lectern ledge (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     140,
+     900
+    ],
+    "dir": "left",
+    "label": "back to mezzanine shelves"
+   }
+  ]
+ },
+ {
+  "id": "04_securite_ecrans",
+  "room": "Salle de sécurité",
+  "name": "Le mur d’écrans",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     60,
+     380,
+     240
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     520,
+     60,
+     780,
+     240
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     940,
+     60,
+     1200,
+     240
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1340,
+     60,
+     1600,
+     240
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1760,
+     60,
+     2020,
+     240
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2160,
+     60,
+     2420,
+     240
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     300,
+     380,
+     480
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     520,
+     300,
+     780,
+     480
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     940,
+     300,
+     1200,
+     480
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1340,
+     300,
+     1600,
+     480
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1760,
+     300,
+     2020,
+     480
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2160,
+     300,
+     2420,
+     480
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     540,
+     380,
+     720
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     520,
+     540,
+     780,
+     720
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     940,
+     540,
+     1200,
+     720
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1340,
+     540,
+     1600,
+     720
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1760,
+     540,
+     2020,
+     720
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2160,
+     540,
+     2420,
+     720
+    ],
+    "label": "crt monitor",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     850,
+     290,
+     960
+    ],
+    "label": "charging dock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     600,
+     850,
+     690,
+     960
+    ],
+    "label": "charging dock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1000,
+     850,
+     1090,
+     960
+    ],
+    "label": "charging dock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1400,
+     850,
+     1490,
+     960
+    ],
+    "label": "charging dock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1800,
+     850,
+     1890,
+     960
+    ],
+    "label": "charging dock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 860,
+    "top": 250,
+    "bottom": 490,
+    "label": "maintenance ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 1660,
+    "top": 490,
+    "bottom": 730,
+    "label": "maintenance ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 460,
+    "top": 730,
+    "bottom": 960,
+    "label": "maintenance ladder"
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     90
+    ],
+    "label": "red warning lamp",
+    "r": 26
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     40,
+     740,
+     2480,
+     1000
+    ],
+    "label": "dark floor, guards recharge here",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     80,
+     900
+    ],
+    "dir": "left",
+    "label": "to staircase"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "05_securite_console",
+  "room": "Salle de sécurité",
+  "name": "La console",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     240,
+     300,
+     330,
+     700
+    ],
+    "label": "toggle switch",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     490,
+     300,
+     580,
+     700
+    ],
+    "label": "toggle switch",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     740,
+     300,
+     830,
+     700
+    ],
+    "label": "toggle switch",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     990,
+     300,
+     1080,
+     700
+    ],
+    "label": "toggle switch",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1320,
+     420,
+     1520,
+     620
+    ],
+    "label": "round dial",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1560,
+     520,
+     1760,
+     700
+    ],
+    "label": "big red button",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     180,
+     80,
+     260,
+     700
+    ],
+    "label": "microphone stand",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1600,
+     150,
+     1860,
+     420
+    ],
+    "label": "cold coffee cup",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "text",
+    "rect": [
+     300,
+     40,
+     1700,
+     110
+    ],
+    "label": "monitors glow above (blue-green light)",
+    "size": 30
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      60,
+      1060
+     ],
+     [
+      1860,
+      1060
+     ],
+     [
+      1700,
+      760
+     ],
+     [
+      220,
+      760
+     ]
+    ],
+    "label": "metal panel (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1800,
+     900
+    ],
+    "dir": "right",
+    "label": "back to screens"
+   }
+  ]
+ },
+ {
+  "id": "06_cabinet_mago_bureau",
+  "room": "Cabinet du Mago",
+  "name": "Le bureau vide",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "special",
+    "rect": [
+     650,
+     120,
+     1270,
+     700
+    ],
+    "label": "antique typewriter, one glowing line on the paper",
+    "size": 30,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1350,
+     140,
+     1800,
+     520
+    ],
+    "label": "old computer screen with blinking cursor",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     380,
+     420,
+     680
+    ],
+    "label": "steaming cup of tea",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     300,
+     720,
+     620,
+     760
+    ],
+    "label": "fountain pen",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1380,
+     560,
+     1700,
+     700
+    ],
+    "label": "glasses on notes",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "text",
+    "rect": [
+     80,
+     40,
+     600,
+     110
+    ],
+    "label": "empty chair behind, still turned",
+    "size": 30
+   },
+   {
+    "kind": "light",
+    "at": [
+     1570,
+     330
+    ],
+    "label": "cold screen light",
+    "r": 26
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      80,
+      1060
+     ],
+     [
+      1840,
+      1060
+     ],
+     [
+      1640,
+      760
+     ],
+     [
+      280,
+      760
+     ]
+    ],
+    "label": "desk surface (walkable)"
+   }
+  ]
+ },
+ {
+  "id": "07_escalier_marches",
+  "room": "Grand escalier",
+  "name": "Les marches",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 420,
+    "y": 960,
+    "label": "step"
+   },
+   {
+    "kind": "floor",
+    "x1": 420,
+    "x2": 760,
+    "y": 830,
+    "label": "step"
+   },
+   {
+    "kind": "floor",
+    "x1": 760,
+    "x2": 1100,
+    "y": 700,
+    "label": "step"
+   },
+   {
+    "kind": "floor",
+    "x1": 1100,
+    "x2": 1440,
+    "y": 570,
+    "label": "step"
+   },
+   {
+    "kind": "floor",
+    "x1": 1440,
+    "x2": 1780,
+    "y": 440,
+    "label": "step"
+   },
+   {
+    "kind": "floor",
+    "x1": 1780,
+    "x2": 2120,
+    "y": 310,
+    "label": "step"
+   },
+   {
+    "kind": "floor",
+    "x1": 2120,
+    "x2": 2460,
+    "y": 180,
+    "label": "step"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     80,
+     978,
+     420,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     420,
+     848,
+     760,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     760,
+     718,
+     1100,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1100,
+     588,
+     1440,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1440,
+     458,
+     1780,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1780,
+     328,
+     2120,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2120,
+     198,
+     2460,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     420,
+     860,
+     520,
+     960
+    ],
+    "label": "dropped book",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1100,
+     740,
+     1170,
+     830
+    ],
+    "label": "thread spool",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     1460,
+     570
+    ],
+    "to": [
+     1760,
+     440
+    ],
+    "label": "ruler as ramp",
+    "steps": 5
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2100,
+     220,
+     2200,
+     310
+    ],
+    "label": "toppled pawn",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 780,
+    "top": 700,
+    "bottom": 830,
+    "label": "brass stair rod"
+   },
+   {
+    "kind": "ladder",
+    "x": 1460,
+    "top": 440,
+    "bottom": 570,
+    "label": "brass stair rod"
+   },
+   {
+    "kind": "light",
+    "at": [
+     2300,
+     80
+    ],
+    "label": "chandelier above",
+    "r": 26
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     80,
+     80,
+     900,
+     700
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     140,
+     900
+    ],
+    "dir": "left",
+    "label": "ground floor"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2400,
+     120
+    ],
+    "dir": "up",
+    "label": "upper floor"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      150,
+      120
+     ],
+     [
+      700,
+      120
+     ],
+     [
+      1250,
+      120
+     ],
+     [
+      1800,
+      120
+     ],
+     [
+      2350,
+      120
+     ]
+    ],
+    "w": 170,
+    "label": "balusters (foreground)"
+   }
+  ]
+ },
+ {
+  "id": "08_escalier_rampe",
+  "room": "Grand escalier",
+  "name": "La rampe",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "stairs",
+    "from": [
+     2300,
+     160
+    ],
+    "to": [
+     200,
+     860
+    ],
+    "label": "polished handrail: long slide",
+    "steps": 1
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2300,
+     100,
+     2460,
+     200
+    ],
+    "label": "top of rail",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     820,
+     240,
+     1010
+    ],
+    "label": "spiral newel post",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     360,
+     1600,
+     450
+    ],
+    "label": "forgotten glove",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     950,
+     520,
+     1040,
+     640
+    ],
+    "label": "hanging scarf",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     600,
+     640,
+     700,
+     720
+    ],
+    "label": "brass ornament",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1250,
+     80
+    ],
+    "label": "chandelier light",
+    "r": 26
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     200,
+     700,
+     2480,
+     1000
+    ],
+    "label": "steps in shadow below",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2380,
+     140
+    ],
+    "dir": "up",
+    "label": "upper floor"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     120,
+     780
+    ],
+    "dir": "left",
+    "label": "ground floor"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "09_escalier_horloge",
+  "room": "Grand escalier",
+  "name": "Le palier à l’horloge",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     20,
+     40,
+     60,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2460,
+     40,
+     2500,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     900,
+     60,
+     1620,
+     260
+    ],
+    "label": "back of the clock face (glowing)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     300,
+     520,
+     620
+    ],
+    "label": "giant gear",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "floor",
+    "x1": 220,
+    "x2": 500,
+    "y": 300,
+    "label": "gear top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     800,
+     430,
+     1080,
+     710
+    ],
+    "label": "giant gear",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "floor",
+    "x1": 820,
+    "x2": 1060,
+    "y": 430,
+    "label": "gear top"
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1400,
+     360,
+     1680,
+     640
+    ],
+    "label": "frozen gear (red pin)",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "floor",
+    "x1": 1420,
+    "x2": 1660,
+    "y": 360,
+    "label": null
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1900,
+     520,
+     2200,
+     820
+    ],
+    "label": "giant gear",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "floor",
+    "x1": 1920,
+    "x2": 2180,
+    "y": 520,
+    "label": "gear top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1150,
+     300,
+     1190,
+     900
+    ],
+    "label": "pendulum rod",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1050,
+     820,
+     1290,
+     980
+    ],
+    "label": "pendulum disc",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "ladder",
+    "x": 640,
+    "top": 300,
+    "bottom": 800,
+    "label": "chain"
+   },
+   {
+    "kind": "ladder",
+    "x": 2300,
+    "top": 500,
+    "bottom": 960,
+    "label": "chain with weight"
+   },
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 2460,
+    "y": 960,
+    "label": "clock floor"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     120,
+     900
+    ],
+    "dir": "left",
+    "label": "back to stairs"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "10_arriere_cartons",
+  "room": "Arrière-boutique",
+  "name": "Les cartons de livraison",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 700,
+    "y": 700,
+    "label": "box top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     718,
+     700,
+     1010
+    ],
+    "label": "cardboard box",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 760,
+    "x2": 1300,
+    "y": 420,
+    "label": "box top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     760,
+     438,
+     1300,
+     1010
+    ],
+    "label": "tall box",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "door",
+    "rect": [
+     900,
+     240,
+     1040,
+     420
+    ],
+    "label": "new game in plastic (door)",
+    "size": 20
+   },
+   {
+    "kind": "floor",
+    "x1": 1360,
+    "x2": 1900,
+    "y": 600,
+    "label": "box top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1360,
+     618,
+     1900,
+     1010
+    ],
+    "label": "opened box",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1500,
+     420,
+     1640,
+     600
+    ],
+    "label": "new game in plastic (door)",
+    "size": 20
+   },
+   {
+    "kind": "floor",
+    "x1": 1960,
+    "x2": 2460,
+    "y": 300,
+    "label": "box top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1960,
+     318,
+     2460,
+     1010
+    ],
+    "label": "stack of boxes",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     500,
+     560,
+     660,
+     700
+    ],
+    "label": "tape roll",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     1700,
+     470,
+     1880,
+     600
+    ],
+    "label": "bubble wrap",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     700,
+     700
+    ],
+    "to": [
+     760,
+     420
+    ],
+    "label": "crumpled paper",
+    "steps": 3
+   },
+   {
+    "kind": "ladder",
+    "x": 1930,
+    "top": 300,
+    "bottom": 600,
+    "label": "string"
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1100,
+     380,
+     1400,
+     420
+    ],
+    "label": "open box cutter (danger)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1250,
+     80
+    ],
+    "label": "bare bulb",
+    "r": 26,
+    "cone": [
+     420,
+     420
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     60,
+     100,
+     700,
+     700
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     100,
+     640
+    ],
+    "dir": "left",
+    "label": "to the counter"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "11_arriere_etabli",
+  "room": "Arrière-boutique",
+  "name": "L’établi d’emballage",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     150,
+     160,
+     650,
+     700
+    ],
+    "label": "vintage label maker",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     650,
+     600,
+     1100,
+     700
+    ],
+    "label": "blank label strip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1150,
+     420,
+     1600,
+     700
+    ],
+    "label": "tape dispenser (teeth)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1650,
+     260,
+     1760,
+     700
+    ],
+    "label": "rubber stamp",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1780,
+     320,
+     1880,
+     700
+    ],
+    "label": "rubber stamp",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     800,
+     330,
+     1050,
+     560
+    ],
+    "label": "spool of string",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "light",
+    "at": [
+     960,
+     60
+    ],
+    "label": "desk lamp",
+    "r": 26,
+    "cone": [
+     700,
+     500
+    ]
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      80,
+      1060
+     ],
+     [
+      1840,
+      1060
+     ],
+     [
+      1640,
+      760
+     ],
+     [
+      280,
+      760
+     ]
+    ],
+    "label": "workbench (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     140,
+     900
+    ],
+    "dir": "left",
+    "label": "back to boxes"
+   }
+  ]
+ },
+ {
+  "id": "12_hall_comptoir",
+  "room": "Hall",
+  "name": "Le comptoir de Madame Hulotte",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     60,
+     300,
+     720
+    ],
+    "label": "brass reading lamp (lighthouse)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     210,
+     120
+    ],
+    "label": "green lamp shade",
+    "r": 26,
+    "cone": [
+     720,
+     260
+    ]
+   },
+   {
+    "kind": "special",
+    "rect": [
+     760,
+     560,
+     1020,
+     700
+    ],
+    "label": "small closed red book (Nella’s book)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1080,
+     300,
+     1440,
+     720
+    ],
+    "label": "card catalogue box (enter)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1480,
+     420,
+     1640,
+     720
+    ],
+    "label": "stack of returned books",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1680,
+     600,
+     1800,
+     720
+    ],
+    "label": "brass bell",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     520,
+     640,
+     700,
+     720
+    ],
+    "label": "gold coins",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "text",
+    "rect": [
+     1500,
+     60,
+     1880,
+     260
+    ],
+    "label": "blurred hall: staircase, windows, moon",
+    "size": 30
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      60,
+      1060
+     ],
+     [
+      1860,
+      1060
+     ],
+     [
+      1660,
+      760
+     ],
+     [
+      260,
+      760
+     ]
+    ],
+    "label": "counter top (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1780,
+     860
+    ],
+    "dir": "right",
+    "label": "ruler bridge to library"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1260,
+     300
+    ],
+    "dir": "up",
+    "label": "climb the card catalogue"
+   }
+  ]
+ },
+ {
+  "id": "13_hall_fiches",
+  "room": "Hall",
+  "name": "Le meuble à fiches",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     180,
+     330,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     400,
+     220,
+     530,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     600,
+     260,
+     730,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     800,
+     180,
+     930,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1000,
+     220,
+     1130,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1200,
+     260,
+     1330,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1400,
+     180,
+     1530,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1600,
+     220,
+     1730,
+     760
+    ],
+    "label": "index card",
+    "size": 20,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1000,
+     120,
+     1130,
+     760
+    ],
+    "label": "pulled-out card (clue)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     640,
+     1800,
+     680
+    ],
+    "label": "brass rod",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     600,
+     140,
+     680,
+     260
+    ],
+    "label": "tab divider",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     960,
+     40
+    ],
+    "label": "light from above",
+    "r": 26
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      80,
+      1060
+     ],
+     [
+      1840,
+      1060
+     ],
+     [
+      1700,
+      820
+     ],
+     [
+      220,
+      820
+     ]
+    ],
+    "label": "drawer edge (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     140,
+     940
+    ],
+    "dir": "left",
+    "label": "back to the counter"
+   }
+  ]
+ },
+ {
+  "id": "14_hall_chute_retours",
+  "room": "Hall",
+  "name": "La chute des retours",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     20,
+     40,
+     60,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2460,
+     40,
+     2500,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2100,
+     60,
+     2400,
+     110
+    ],
+    "label": "brass return slot",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     2250,
+     120
+    ],
+    "label": "light through the slot",
+    "r": 26,
+    "cone": [
+     500,
+     160
+    ]
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     2300,
+     180
+    ],
+    "to": [
+     400,
+     820
+    ],
+    "label": "slanted metal chute (slide)",
+    "steps": 1
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     340,
+     1640,
+     470
+    ],
+    "label": "stuck book",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     900,
+     520,
+     1040,
+     640
+    ],
+    "label": "stuck game box",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 900,
+    "y": 900,
+    "label": "pile of returned books (soft landing)"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     80,
+     918,
+     900,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     980,
+     820,
+     1200,
+     1010
+    ],
+    "label": "gap between books",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "exit",
+    "at": [
+     140,
+     840
+    ],
+    "dir": "left",
+    "label": "hidden opening behind the counter"
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     60,
+     400,
+     1300,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "15_bibliotheque_contes",
+  "room": "Grande bibliothèque",
+  "name": "Travée des Contes",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "door",
+    "rect": [
+     140,
+     80,
+     260,
+     250
+    ],
+    "label": "storybook (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     420,
+     320,
+     540,
+     490
+    ],
+    "label": "storybook (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1000,
+     80,
+     1120,
+     250
+    ],
+    "label": "storybook (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1250,
+     560,
+     1370,
+     730
+    ],
+    "label": "glowing storybook (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1900,
+     320,
+     2020,
+     490
+    ],
+    "label": "storybook (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     2240,
+     790,
+     2360,
+     960
+    ],
+    "label": "storybook (door)",
+    "size": 20
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     560,
+     170,
+     760,
+     250
+    ],
+    "label": "ball of yarn",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1450,
+     370,
+     1600,
+     490
+    ],
+    "label": "chest of drawers",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     300,
+     890,
+     400,
+     960
+    ],
+    "label": "die",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1850,
+     590,
+     1930,
+     730
+    ],
+    "label": "wooden pawn",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     600,
+     600,
+     800,
+     730
+    ],
+    "label": "open box (hide)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     2000,
+     130,
+     2200,
+     250
+    ],
+    "label": "gap between books",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 780,
+    "top": 250,
+    "bottom": 490,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 300,
+    "top": 490,
+    "bottom": 730,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 1560,
+    "top": 730,
+    "bottom": 960,
+    "label": "ladder"
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     1450,
+     490
+    ],
+    "to": [
+     1600,
+     370
+    ],
+    "label": "drawers as steps",
+    "steps": 3
+   },
+   {
+    "kind": "floor",
+    "x1": 830,
+    "x2": 1690,
+    "y": 370,
+    "label": "ruler bridge"
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     110
+    ],
+    "label": "reading lamp",
+    "r": 26,
+    "cone": [
+     490,
+     380
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     1690,
+     500,
+     2480,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     80,
+     900
+    ],
+    "dir": "left",
+    "label": "ruler bridge to the counter"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2440,
+     190
+    ],
+    "dir": "right",
+    "label": "to the Arcade"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "16_bibliotheque_arcade",
+  "room": "Grande bibliothèque",
+  "name": "Travée de l’Arcade",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "door",
+    "rect": [
+     160,
+     80,
+     280,
+     250
+    ],
+    "label": "retro game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "special",
+    "rect": [
+     500,
+     310,
+     640,
+     490
+    ],
+    "label": "BARREL GAME box (door)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1050,
+     80,
+     1170,
+     250
+    ],
+    "label": "retro game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1300,
+     560,
+     1420,
+     730
+    ],
+    "label": "retro game box, lid ajar",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1900,
+     320,
+     2020,
+     490
+    ],
+    "label": "retro game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     2030,
+     790,
+     2150,
+     960
+    ],
+    "label": "retro game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     700,
+     100,
+     780,
+     250
+    ],
+    "label": "game cartridge",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     900,
+     410,
+     1150,
+     490
+    ],
+    "label": "fallen joystick",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     320,
+     800,
+     400,
+     960
+    ],
+    "label": "cartridge",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1100,
+     900,
+     1500,
+     960
+    ],
+    "label": "coiled cable",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     1700,
+     590,
+     1880,
+     730
+    ],
+    "label": "cartridge sleeve",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 720,
+    "top": 490,
+    "bottom": 730,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 1560,
+    "top": 250,
+    "bottom": 490,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 2300,
+    "top": 730,
+    "bottom": 960,
+    "label": "ladder"
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     150,
+     730
+    ],
+    "to": [
+     350,
+     580
+    ],
+    "label": "cable loop",
+    "steps": 4
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     110
+    ],
+    "label": "desk lamp",
+    "r": 26,
+    "cone": [
+     490,
+     380
+    ]
+   },
+   {
+    "kind": "light",
+    "at": [
+     560,
+     560
+    ],
+    "label": "pixel glow",
+    "r": 20
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     40,
+     740,
+     840,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     1690,
+     60,
+     2480,
+     480
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     80,
+     190
+    ],
+    "dir": "left",
+    "label": "to the Contes"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2440,
+     670
+    ],
+    "dir": "right",
+    "label": "to board games"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1260,
+     90
+    ],
+    "dir": "up",
+    "label": "glass display case"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "17_bibliotheque_jeux_societe",
+  "room": "Grande bibliothèque",
+  "name": "Travée des Jeux de société",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "door",
+    "rect": [
+     140,
+     70,
+     300,
+     250
+    ],
+    "label": "board game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1000,
+     310,
+     1160,
+     490
+    ],
+    "label": "board game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1300,
+     780,
+     1460,
+     960
+    ],
+    "label": "board game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1950,
+     70,
+     2110,
+     250
+    ],
+    "label": "board game box (door)",
+    "size": 20
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     450,
+     420,
+     560,
+     490
+    ],
+    "label": "die",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     600,
+     420,
+     710,
+     490
+    ],
+    "label": "die",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     1700,
+     730
+    ],
+    "to": [
+     1950,
+     590
+    ],
+    "label": "fanned cards (ramp)",
+    "steps": 4
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2200,
+     580,
+     2280,
+     730
+    ],
+    "label": "pawn",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 830,
+    "x2": 1690,
+    "y": 610,
+    "label": "rolled game board bridge"
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     300,
+     590,
+     520,
+     730
+    ],
+    "label": "open box with pieces",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     2100,
+     360,
+     2350,
+     490
+    ],
+    "label": "open box",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 780,
+    "top": 250,
+    "bottom": 490,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 1600,
+    "top": 490,
+    "bottom": 730,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 400,
+    "top": 730,
+    "bottom": 960,
+    "label": "ladder"
+   },
+   {
+    "kind": "light",
+    "at": [
+     400,
+     110
+    ],
+    "label": "brass lantern",
+    "r": 26,
+    "cone": [
+     250,
+     200
+    ]
+   },
+   {
+    "kind": "light",
+    "at": [
+     2100,
+     560
+    ],
+    "label": "brass lantern",
+    "r": 26,
+    "cone": [
+     730,
+     200
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     860,
+     60,
+     1660,
+     480
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     860,
+     740,
+     1660,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     80,
+     670
+    ],
+    "dir": "left",
+    "label": "to the Arcade"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2440,
+     970
+    ],
+    "dir": "down",
+    "label": "hanging rug to games table"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "18_bibliotheque_vitrine",
+  "room": "Grande bibliothèque",
+  "name": "La vitrine des jeux",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     20,
+     40,
+     60,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2460,
+     40,
+     2500,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     20,
+     40,
+     2500,
+     80
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 2460,
+    "y": 420,
+    "label": "glass shelf"
+   },
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 2460,
+    "y": 760,
+    "label": "glass shelf"
+   },
+   {
+    "kind": "special",
+    "rect": [
+     380,
+     540,
+     560,
+     760
+    ],
+    "label": "special game box on velvet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1170,
+     540,
+     1350,
+     760
+    ],
+    "label": "special game box on velvet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1960,
+     540,
+     2140,
+     760
+    ],
+    "label": "special game box on velvet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     470,
+     460
+    ],
+    "label": "spotlight",
+    "r": 26,
+    "cone": [
+     540,
+     100
+    ]
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     460
+    ],
+    "label": "spotlight",
+    "r": 26,
+    "cone": [
+     540,
+     100
+    ]
+   },
+   {
+    "kind": "light",
+    "at": [
+     2050,
+     460
+    ],
+    "label": "spotlight",
+    "r": 26,
+    "cone": [
+     540,
+     100
+    ]
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2300,
+     480,
+     2440,
+     620
+    ],
+    "label": "brass lock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 820,
+    "top": 420,
+    "bottom": 760,
+    "label": "hinge"
+   },
+   {
+    "kind": "text",
+    "rect": [
+     200,
+     120,
+     2300,
+     300
+    ],
+    "label": "glass doors: reflections and fingerprints",
+    "size": 30
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1260,
+     960
+    ],
+    "dir": "down",
+    "label": "back to the Arcade"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "19_bibliotheque_sol",
+  "room": "Grande bibliothèque",
+  "name": "Le sol de la bibliothèque",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     40,
+     300,
+     760
+    ],
+    "label": "furniture leg (column)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     40,
+     1640,
+     640
+    ],
+    "label": "furniture leg (column)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     700,
+     480,
+     900,
+     680
+    ],
+    "label": "lost marble",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1100,
+     560,
+     1260,
+     660
+    ],
+    "label": "dust ball",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "text",
+    "rect": [
+     300,
+     260,
+     1400,
+     380
+    ],
+    "label": "far distance: bottom of the grand staircase, small door",
+    "size": 30
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     0,
+     860,
+     1920,
+     1080
+    ],
+    "label": "carpet fringe (tall red and cream grass)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      300,
+      860
+     ],
+     [
+      1700,
+      860
+     ],
+     [
+      1500,
+      640
+     ],
+     [
+      500,
+      640
+     ]
+    ],
+    "label": "open parquet (no hiding)"
+   },
+   {
+    "kind": "light",
+    "at": [
+     1700,
+     120
+    ],
+    "label": "cold moonlight",
+    "r": 26
+   },
+   {
+    "kind": "exit",
+    "at": [
+     220,
+     820
+    ],
+    "dir": "up",
+    "label": "rope ladder up to the Contes"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1600,
+     700
+    ],
+    "dir": "right",
+    "label": "to the cupboard under the stairs"
+   }
+  ]
+ },
+ {
+  "id": "20_lecture_longue_table",
+  "room": "Salle de lecture",
+  "name": "La longue table",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     240,
+     80,
+     320,
+     620
+    ],
+    "label": "banker lamp",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     760,
+     80,
+     840,
+     620
+    ],
+    "label": "banker lamp",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1280,
+     80,
+     1360,
+     620
+    ],
+    "label": "banker lamp",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     280,
+     140
+    ],
+    "label": "green shade",
+    "r": 26,
+    "cone": [
+     700,
+     220
+    ]
+   },
+   {
+    "kind": "light",
+    "at": [
+     800,
+     140
+    ],
+    "label": "green shade",
+    "r": 26,
+    "cone": [
+     700,
+     220
+    ]
+   },
+   {
+    "kind": "light",
+    "at": [
+     1320,
+     140
+    ],
+    "label": "green shade",
+    "r": 26,
+    "cone": [
+     700,
+     220
+    ]
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1450,
+     360,
+     1820,
+     700
+    ],
+    "label": "giant steaming teacup",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     500,
+     520,
+     900,
+     700
+    ],
+    "label": "open book (tent)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1000,
+     640,
+     1140,
+     700
+    ],
+    "label": "biscuit crumbs",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      60,
+      1060
+     ],
+     [
+      1860,
+      1060
+     ],
+     [
+      1600,
+      740
+     ],
+     [
+      320,
+      740
+     ]
+    ],
+    "label": "table top (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1800,
+     880
+    ],
+    "dir": "right",
+    "label": "down to the armchair"
+   }
+  ]
+ },
+ {
+  "id": "21_lecture_fauteuil",
+  "room": "Salle de lecture",
+  "name": "Le fauteuil club",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     300,
+     520,
+     1010
+    ],
+    "label": "armrest",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 200,
+    "x2": 520,
+    "y": 300,
+    "label": "armrest top"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     520,
+     560,
+     1900,
+     1010
+    ],
+    "label": "seat cushion",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 520,
+    "x2": 1900,
+    "y": 560,
+    "label": "cushion plateau"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1900,
+     100,
+     2220,
+     1010
+    ],
+    "label": "chair back",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1900,
+    "x2": 2220,
+    "y": 100,
+    "label": "top of the back"
+   },
+   {
+    "kind": "ladder",
+    "x": 2060,
+    "top": 100,
+    "bottom": 560,
+    "label": "knitted blanket (rope)"
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     520,
+     560
+    ],
+    "to": [
+     200,
+     300
+    ],
+    "label": "leather folds",
+    "steps": 4
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     1100,
+     580,
+     1300,
+     700
+    ],
+    "label": "gap between cushions",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1150,
+     620,
+     1250,
+     690
+    ],
+    "label": "lost coin",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2300,
+     400,
+     2480,
+     1010
+    ],
+    "label": "side table",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     2390,
+     300
+    ],
+    "label": "table lamp",
+    "r": 26
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     60,
+     60,
+     900,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2420,
+     260
+    ],
+    "dir": "right",
+    "label": "up to the long table"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "22_lecture_cheminee",
+  "room": "Salle de lecture",
+  "name": "La cheminée",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 2460,
+    "y": 300,
+    "label": "mantelpiece (high shelf)"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     300,
+     140,
+     420,
+     300
+    ],
+    "label": "candlestick",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1150,
+     120,
+     1370,
+     300
+    ],
+    "label": "mantel clock",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1900,
+     180,
+     2050,
+     300
+    ],
+    "label": "small frame",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     300,
+     260,
+     1010
+    ],
+    "label": "stone pillar",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2260,
+     300,
+     2460,
+     1010
+    ],
+    "label": "stone pillar",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     700,
+     620,
+     1820,
+     960
+    ],
+    "label": "wall of fire (firewall) blocks the way",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 260,
+    "x2": 700,
+    "y": 960,
+    "label": "hearth (left side)"
+   },
+   {
+    "kind": "floor",
+    "x1": 1820,
+    "x2": 2260,
+    "y": 960,
+    "label": "hearth (right side)"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     500,
+     500,
+     560,
+     960
+    ],
+    "label": "fire poker",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 400,
+    "top": 300,
+    "bottom": 960,
+    "label": "fire tongs"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     650,
+     760,
+     1870,
+     800
+    ],
+    "label": "fire screen",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     700
+    ],
+    "label": "roaring fire",
+    "r": 60
+   },
+   {
+    "kind": "exit",
+    "at": [
+     150,
+     900
+    ],
+    "dir": "left",
+    "label": "back to the armchair"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "23_jeux_table_plateau",
+  "room": "Salle de jeux",
+  "name": "La table du jeu de plateau",
+  "view": "dessus",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     160,
+     100,
+     1760,
+     980
+    ],
+    "label": "antique game board: painted landscape (forests, mountains, rivers, castles)",
+    "size": 30,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     260,
+     840,
+     360,
+     920
+    ],
+    "label": "1",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     400,
+     720,
+     500,
+     800
+    ],
+    "label": "2",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     540,
+     600,
+     640,
+     680
+    ],
+    "label": "3",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     680,
+     480,
+     780,
+     560
+    ],
+    "label": "4",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     820,
+     360,
+     920,
+     440
+    ],
+    "label": "5",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     960,
+     840,
+     1060,
+     920
+    ],
+    "label": "6",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     1100,
+     720,
+     1200,
+     800
+    ],
+    "label": "7",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     1240,
+     600,
+     1340,
+     680
+    ],
+    "label": "8",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     1380,
+     480,
+     1480,
+     560
+    ],
+    "label": "9",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "tile",
+    "rect": [
+     1520,
+     360,
+     1620,
+     440
+    ],
+    "label": "10",
+    "size": 26,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1500,
+     200,
+     1660,
+     360
+    ],
+    "label": "castle (goal)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     60,
+     200,
+     200
+    ],
+    "label": "die",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1760,
+     860,
+     1900,
+     1000
+    ],
+    "label": "card deck",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1840,
+     80
+    ],
+    "label": "brass lamp",
+    "r": 26
+   }
+  ]
+ },
+ {
+  "id": "24_jeux_coffre",
+  "room": "Salle de jeux",
+  "name": "Le coffre à jouets",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     20,
+     40,
+     80,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2440,
+     40,
+     2500,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "text",
+    "rect": [
+     200,
+     40,
+     2300,
+     120
+    ],
+    "label": "lid open above: moonlight falls in",
+    "size": 30
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     80,
+     700,
+     900,
+     1010
+    ],
+    "label": "rag doll (sleeping giant)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 900,
+    "y": 700,
+    "label": "rag doll"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     950,
+     520,
+     1500,
+     1010
+    ],
+    "label": "wooden blocks",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     900,
+     700
+    ],
+    "to": [
+     1200,
+     520
+    ],
+    "label": "blocks as stairs",
+    "steps": 4
+   },
+   {
+    "kind": "floor",
+    "x1": 1200,
+    "x2": 1500,
+    "y": 520,
+    "label": null
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1550,
+     360,
+     1900,
+     1010
+    ],
+    "label": "jack-in-the-box",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1550,
+    "x2": 1900,
+    "y": 360,
+    "label": "box lid"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1950,
+     640,
+     2440,
+     1010
+    ],
+    "label": "deflated ball",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1950,
+    "x2": 2440,
+    "y": 640,
+    "label": null
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     400,
+     560,
+     640,
+     700
+    ],
+    "label": "under the doll arm",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2100,
+     560,
+     2200,
+     640
+    ],
+    "label": "marble",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "ladder",
+    "x": 1935,
+    "top": 360,
+    "bottom": 640,
+    "label": "spinning top string"
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     90
+    ],
+    "label": "moonlight",
+    "r": 26,
+    "cone": [
+     520,
+     400
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     80,
+     760,
+     2440,
+     1000
+    ],
+    "label": "deep darkness at the bottom",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     1260,
+     300
+    ],
+    "dir": "up",
+    "label": "climb out"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "25_jeux_borne_arcade",
+  "room": "Salle de jeux",
+  "name": "La borne d’arcade de l’intérieur",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     20,
+     40,
+     60,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2460,
+     40,
+     2500,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     700,
+     60,
+     1820,
+     300
+    ],
+    "label": "back of the round CRT tube (glowing pixels)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     40,
+     60,
+     80,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1240,
+     60,
+     1280,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2440,
+     60,
+     2480,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     40,
+     40,
+     2480,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 1240,
+    "y": 380,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1280,
+    "x2": 2440,
+    "y": 380,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 1240,
+    "y": 640,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1280,
+    "x2": 2440,
+    "y": 640,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 80,
+    "x2": 1240,
+    "y": 900,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1280,
+    "x2": 2440,
+    "y": 900,
+    "label": null
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     290,
+     340,
+     380
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     800,
+     290,
+     940,
+     380
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     290,
+     1640,
+     380
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2000,
+     290,
+     2140,
+     380
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     550,
+     340,
+     640
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     800,
+     550,
+     940,
+     640
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     550,
+     1640,
+     640
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2000,
+     550,
+     2140,
+     640
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     810,
+     340,
+     900
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     800,
+     810,
+     940,
+     900
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     810,
+     1640,
+     900
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2000,
+     810,
+     2140,
+     900
+    ],
+    "label": "chip",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 1100,
+    "top": 380,
+    "bottom": 640,
+    "label": "wire bundle"
+   },
+   {
+    "kind": "ladder",
+    "x": 1400,
+    "top": 640,
+    "bottom": 900,
+    "label": "wire bundle"
+   },
+   {
+    "kind": "ladder",
+    "x": 420,
+    "top": 640,
+    "bottom": 900,
+    "label": "wire bundle"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2100,
+     700,
+     2400,
+     900
+    ],
+    "label": "cooling fan (windmill)",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "special",
+    "rect": [
+     500,
+     820,
+     640,
+     900
+    ],
+    "label": "coin mechanism",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     200
+    ],
+    "label": "electric blue glow",
+    "r": 40
+   },
+   {
+    "kind": "exit",
+    "at": [
+     100,
+     840
+    ],
+    "dir": "left",
+    "label": "out through the coin slot"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "26_video_cabine",
+  "room": "Vidéoprojection",
+  "name": "La cabine du projecteur",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     500,
+     120,
+     900,
+     520
+    ],
+    "label": "film reel (wheel)",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1300,
+     120,
+     1700,
+     520
+    ],
+    "label": "film reel (wheel)",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "floor",
+    "x1": 700,
+    "x2": 1500,
+    "y": 300,
+    "label": "film strip bridge"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     700,
+     520,
+     1700,
+     820
+    ],
+    "label": "projector body",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 700,
+    "x2": 1700,
+    "y": 520,
+    "label": "projector top"
+   },
+   {
+    "kind": "light",
+    "at": [
+     1750,
+     660
+    ],
+    "label": "beam of light to the screen",
+    "r": 26,
+    "cone": [
+     1010,
+     200
+    ]
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     100,
+     640,
+     500,
+     1010
+    ],
+    "label": "film cans",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 100,
+    "x2": 500,
+    "y": 640,
+    "label": "film cans"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1900,
+     760,
+     2400,
+     1010
+    ],
+    "label": "rewinding table",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1900,
+    "x2": 2400,
+    "y": 760,
+    "label": null
+   },
+   {
+    "kind": "ladder",
+    "x": 600,
+    "top": 520,
+    "bottom": 640,
+    "label": "cable"
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     500,
+     640
+    ],
+    "to": [
+     700,
+     520
+    ],
+    "label": "cans as steps",
+    "steps": 3
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2420,
+     700
+    ],
+    "dir": "right",
+    "label": "through the window: the screen"
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     60,
+     60,
+     500,
+     600
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "27_video_ecran",
+  "room": "Vidéoprojection",
+  "name": "L’écran",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "special",
+    "rect": [
+     120,
+     80,
+     1100,
+     760
+    ],
+    "label": "white cinema screen: giant shadows appear here",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     80,
+     120,
+     900
+    ],
+    "label": "red curtain",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1100,
+     80,
+     1180,
+     900
+    ],
+    "label": "red curtain",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 1400,
+    "y": 900,
+    "label": "small wooden stage"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     918,
+     1400,
+     1010
+    ],
+    "label": null,
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     2450,
+     200
+    ],
+    "label": "projector beam from the back",
+    "r": 26,
+    "cone": [
+     800,
+     500
+    ]
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     700,
+     1700,
+     1010
+    ],
+    "label": "seat",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1740,
+     700,
+     1940,
+     1010
+    ],
+    "label": "seat",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1980,
+     700,
+     2180,
+     1010
+    ],
+    "label": "seat",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     2220,
+     700,
+     2420,
+     1010
+    ],
+    "label": "seat",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1500,
+    "x2": 1700,
+    "y": 700,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1740,
+    "x2": 1940,
+    "y": 700,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1980,
+    "x2": 2180,
+    "y": 700,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 2220,
+    "x2": 2420,
+    "y": 700,
+    "label": null
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     1400,
+     900
+    ],
+    "to": [
+     1500,
+     700
+    ],
+    "label": "seat edge",
+    "steps": 3
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2420,
+     640
+    ],
+    "dir": "right",
+    "label": "up to the projection booth"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      1500,
+      40
+     ],
+     [
+      1740,
+      40
+     ],
+     [
+      1980,
+      40
+     ],
+     [
+      2220,
+      40
+     ]
+    ],
+    "w": 170,
+    "label": "front row seats"
+   }
+  ]
+ },
+ {
+  "id": "28_video_vhs",
+  "room": "Vidéoprojection",
+  "name": "Le rayon des cassettes VHS",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "door",
+    "rect": [
+     140,
+     80,
+     240,
+     250
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     560,
+     80,
+     660,
+     250
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1000,
+     320,
+     1100,
+     490
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1400,
+     320,
+     1500,
+     490
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1800,
+     80,
+     1900,
+     250
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     2200,
+     560,
+     2300,
+     730
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     400,
+     560,
+     500,
+     730
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "door",
+    "rect": [
+     1100,
+     790,
+     1200,
+     960
+    ],
+    "label": "vhs box (door)",
+    "size": 20
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     700,
+     490
+    ],
+    "to": [
+     800,
+     370
+    ],
+    "label": "cassette pulled out",
+    "steps": 3
+   },
+   {
+    "kind": "stairs",
+    "from": [
+     1700,
+     730
+    ],
+    "to": [
+     1600,
+     610
+    ],
+    "label": "cassette pulled out",
+    "steps": 3
+   },
+   {
+    "kind": "ladder",
+    "x": 780,
+    "top": 490,
+    "bottom": 730,
+    "label": "unspooled tape"
+   },
+   {
+    "kind": "ladder",
+    "x": 1580,
+    "top": 250,
+    "bottom": 490,
+    "label": "unspooled tape"
+   },
+   {
+    "kind": "ladder",
+    "x": 2300,
+    "top": 730,
+    "bottom": 960,
+    "label": "unspooled tape"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1880,
+     320,
+     2150,
+     490
+    ],
+    "label": "small old tv (flickering)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     2015,
+     420
+    ],
+    "label": "tv glow",
+    "r": 20
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     600,
+     830,
+     800,
+     960
+    ],
+    "label": "empty vhs sleeve",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1260,
+     110
+    ],
+    "label": "pink neon glow",
+    "r": 26,
+    "cone": [
+     490,
+     360
+    ]
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     40,
+     740,
+     840,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     80,
+     900
+    ],
+    "dir": "left",
+    "label": "to the screen"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "29_cagibi_balais",
+  "room": "Cagibi",
+  "name": "Le placard à balais",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "text",
+    "rect": [
+     300,
+     60,
+     2200,
+     160
+    ],
+    "label": "ceiling: slanted underside of the staircase",
+    "size": 30
+   },
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 900,
+    "y": 520,
+    "label": "shelf with bottles"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     100,
+     380,
+     200,
+     520
+    ],
+    "label": "bottle",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     260,
+     380,
+     360,
+     520
+    ],
+    "label": "bottle",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     420,
+     380,
+     520,
+     520
+    ],
+    "label": "bottle",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     580,
+     380,
+     680,
+     520
+    ],
+    "label": "bottle",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     740,
+     380,
+     840,
+     520
+    ],
+    "label": "bottle",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1000,
+     200,
+     1060,
+     1010
+    ],
+    "label": "broom",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1200,
+     300,
+     1260,
+     1010
+    ],
+    "label": "mop",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1300,
+     760,
+     1600,
+     1010
+    ],
+    "label": "bucket",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 1300,
+    "x2": 1600,
+    "y": 760,
+    "label": "bucket rim"
+   },
+   {
+    "kind": "hide",
+    "rect": [
+     1650,
+     560,
+     2200,
+     1010
+    ],
+    "label": "old copper vacuum (Disinfettore lair)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     600,
+     400,
+     900
+    ],
+    "label": "hanging rags",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "ladder",
+    "x": 1030,
+    "top": 520,
+    "bottom": 960,
+    "label": "broom handle"
+   },
+   {
+    "kind": "special",
+    "rect": [
+     2260,
+     760,
+     2440,
+     1010
+    ],
+    "label": "small locked door (to the basement)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "floor",
+    "x1": 60,
+    "x2": 2460,
+    "y": 1000,
+    "label": "closet floor"
+   },
+   {
+    "kind": "light",
+    "at": [
+     600,
+     1040
+    ],
+    "label": "line of light under the door",
+    "r": 14
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     1600,
+     300,
+     2460,
+     1000
+    ],
+    "label": "shadow",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     100,
+     960
+    ],
+    "dir": "left",
+    "label": "out under the stairs"
+   }
+  ]
+ },
+ {
+  "id": "30_reserves_boite_sans_nom",
+  "room": "Réserves",
+  "name": "La boîte sans nom",
+  "view": "coupe",
+  "elements": [
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     60,
+     50,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     830,
+     60,
+     870,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     1650,
+     60,
+     1690,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     2470,
+     60,
+     2510,
+     1010
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "frame",
+    "rect": [
+     10,
+     40,
+     2510,
+     70
+    ],
+    "label": null,
+    "size": 22
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 250,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 490,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 730,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 50,
+    "x2": 830,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 870,
+    "x2": 1650,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "floor",
+    "x1": 1690,
+    "x2": 2470,
+    "y": 960,
+    "label": null
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     50,
+     420,
+     250
+    ],
+    "label": "boxes under white sheet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     450,
+     290,
+     750,
+     490
+    ],
+    "label": "boxes under white sheet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1000,
+     50,
+     1300,
+     250
+    ],
+    "label": "boxes under white sheet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1250,
+     530,
+     1550,
+     730
+    ],
+    "label": "boxes under white sheet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1800,
+     290,
+     2100,
+     490
+    ],
+    "label": "boxes under white sheet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     100,
+     760,
+     400,
+     960
+    ],
+    "label": "boxes under white sheet",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     2200,
+     760,
+     2360,
+     960
+    ],
+    "label": "the blank game box (purple glow)",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     2280,
+     120
+    ],
+    "label": "one beam of cold moonlight",
+    "r": 26,
+    "cone": [
+     760,
+     120
+    ]
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     400,
+     630,
+     520,
+     730
+    ],
+    "label": "dust ball",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "ladder",
+    "x": 780,
+    "top": 250,
+    "bottom": 490,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 1620,
+    "top": 490,
+    "bottom": 730,
+    "label": "ladder"
+   },
+   {
+    "kind": "ladder",
+    "x": 860,
+    "top": 730,
+    "bottom": 960,
+    "label": "cobweb"
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     60,
+     80,
+     2460,
+     120
+    ],
+    "label": "dripping pipe",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "shadow",
+    "rect": [
+     40,
+     120,
+     2100,
+     1000
+    ],
+    "label": "deep shadow everywhere",
+    "size": 22
+   },
+   {
+    "kind": "exit",
+    "at": [
+     80,
+     190
+    ],
+    "dir": "left",
+    "label": "door from the cupboard"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     2440,
+     430
+    ],
+    "dir": "right",
+    "label": "secret passage"
+   },
+   {
+    "kind": "fg",
+    "y": 1010,
+    "shapes": [
+     [
+      80,
+      50
+     ],
+     [
+      420,
+      90
+     ],
+     [
+      980,
+      40
+     ],
+     [
+      1500,
+      110
+     ],
+     [
+      2080,
+      60
+     ]
+    ],
+    "w": 170,
+    "label": "foreground silhouettes"
+   }
+  ]
+ },
+ {
+  "id": "31_collezione_cabinet",
+  "room": "Collezione",
+  "name": "Le cabinet des bugs capturés",
+  "view": "macro",
+  "elements": [
+   {
+    "kind": "prop",
+    "rect": [
+     120,
+     60,
+     420,
+     560
+    ],
+    "label": "display case with pinned creatures",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     480,
+     60,
+     780,
+     560
+    ],
+    "label": "display case with pinned creatures",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     840,
+     60,
+     1140,
+     560
+    ],
+    "label": "display case with pinned creatures",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1200,
+     60,
+     1500,
+     560
+    ],
+    "label": "display case with pinned creatures",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1560,
+     60,
+     1860,
+     560
+    ],
+    "label": "display case with pinned creatures",
+    "size": 22,
+    "round": false
+   },
+   {
+    "kind": "special",
+    "rect": [
+     1560,
+     220,
+     1720,
+     420
+    ],
+    "label": "empty spot: pin and blank label waiting",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     760,
+     380,
+     1160,
+     760
+    ],
+    "label": "glass bell jar",
+    "size": 24,
+    "round": true
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1200,
+     600,
+     1440,
+     760
+    ],
+    "label": "giant magnifying lamp",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     1500,
+     600,
+     1720,
+     760
+    ],
+    "label": "jar of pins",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "prop",
+    "rect": [
+     200,
+     660,
+     520,
+     740
+    ],
+    "label": "tweezers",
+    "size": 24,
+    "round": false
+   },
+   {
+    "kind": "light",
+    "at": [
+     1400,
+     320
+    ],
+    "label": "cold teal light",
+    "r": 26,
+    "cone": [
+     760,
+     300
+    ]
+   },
+   {
+    "kind": "walk",
+    "poly": [
+     [
+      60,
+      1060
+     ],
+     [
+      1860,
+      1060
+     ],
+     [
+      1660,
+      780
+     ],
+     [
+      260,
+      780
+     ]
+    ],
+    "label": "workbench (walkable)"
+   },
+   {
+    "kind": "exit",
+    "at": [
+     140,
+     900
+    ],
+    "dir": "left",
+    "label": "back to the storage room"
+   }
+  ]
+ }
+]
