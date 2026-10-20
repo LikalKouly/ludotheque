@@ -1,7 +1,7 @@
 // Bilan de fin du prototype : le parcours du joueur, issue par issue.
 
 import Phaser from 'phaser';
-import { COLORS } from '../systems/art';
+import { COLORS, motes, stopMotion } from '../systems/art';
 import { resetState, state } from '../systems/state';
 import { BARRELS_SUMMARY, CHASE_SUMMARY } from '../systems/story';
 import { W, button, goTo, textStyle } from '../systems/ui';
@@ -15,7 +15,11 @@ export class EndScene extends Phaser.Scene {
     const s = state();
     this.cameras.main.fadeIn(500);
     this.add.rectangle(0, 0, W, 720, COLORS.night).setOrigin(0);
-    this.add.text(W / 2, 70, 'Fin du prototype', textStyle(64, '#f6c945')).setOrigin(0.5);
+    motes(this, 16, 1);
+    this.add.image(0, 0, 'vignette').setOrigin(0).setDepth(2);
+    const nella = this.add.image(1130, 560, 'hero').setOrigin(0.5, 1).setScale(1.6).setDepth(3);
+    stopMotion(this, nella, 1.5);
+    this.add.text(W / 2, 70, 'Fin du prototype', textStyle(64, '#f2b25c')).setOrigin(0.5);
     this.add.text(W / 2, 130, 'Voici ton parcours. Rejoue pour découvrir les autres issues !', textStyle(24)).setOrigin(0.5);
 
     const lines = [

@@ -1,48 +1,56 @@
-// Textes de l'histoire : noms provisoires, pages du livre, résumés des issues.
+// Textes de l'histoire. Les noms restent provisoires.
+// Nella ne sait pas encore qu'elle est le bug ; le codeur, Il Mago, ne se montre jamais.
 
 import type { BarrelsOutcome, ChaseOutcome } from './state';
 
-export const HERO = 'Pico';
-export const MAGICIAN = 'Maître Bidouille';
+export const HERO = 'Nella';
+export const CODER = 'Il Mago';
 export const OWL = 'Madame Hulotte';
 export const RAT = 'Grignote';
-export const FIANCEE = 'Lila';
+
+// Personnage qui parle → image affichée à côté de ses répliques.
+export const PORTRAITS: Record<string, string> = {
+  [HERO]: 'portrait-nella',
+  [OWL]: 'owl',
+  [RAT]: 'rat',
+  'Le gorille': 'gorilla-free',
+};
 
 export const PAGES: Record<number, { title: string; text: string }> = {
   1: {
     title: 'Page 1',
     text:
       "…je rangeais les Réserves, tard. Tout au fond, une boîte sans nom. " +
-      "Elle chuchotait. Elle chuchotait MON nom. J'ai tendu la main…",
+      "Quand je l'ai touchée, son étiquette s'est mise à grésiller, comme un vieil écran…",
   },
   2: {
     title: 'Page 2',
     text:
-      "…Maître Bidouille m'a pris par l'épaule. Il avait les yeux mouillés. " +
-      "« Pardonne-moi, petit. C'est pour toi que je fais ça. »",
+      "…tout le monde dit que les gardiens chassent les nuisibles de la Ludoteca. " +
+      'Alors pourquoi leur lumière me fait-elle si peur ?',
   },
   3: {
     title: 'Page 3 (secrète)',
     text:
-      "…sur la boîte sans nom, il y avait une étiquette à moitié effacée. " +
-      "Je connais cette écriture. C'est la mienne.",
+      "…une note, d'une écriture qui n'est pas d'ici : « Erreur n° 0, trouvée dans la Ludoteca. " +
+      'Nom de code : Coccinella. »',
   },
 };
 
 export const CHASE_SUMMARY: Record<ChaseOutcome, string> = {
-  rattrape: 'Tu as rattrapé le magicien : il a lâché une page, mais il est furieux.',
-  presque: "Tu l'as presque eu : il a fait tomber une fiche d'emprunt.",
-  plonge: "Il a plongé dans la boîte « Barils en Folie » sous tes yeux.",
-  perdu: "Tu l'as perdu de vue. Il faudra enquêter pour savoir où il se cache.",
-  raccourci: 'Ton raccourci a payé : tu es arrivé avant lui et tu lui as tendu un piège.',
-  aide: 'Tu as sauvé Grignote. Le magicien en a profité pour disparaître.',
+  rattrape: 'Tu as rattrapé une page au vol. Les autres ont filé.',
+  presque: "Une page t'a échappé de justesse, mais une fiche d'emprunt est tombée avec.",
+  plonge: 'Tes pages se sont engouffrées dans « Barils en Folie », sous tes yeux.',
+  perdu: 'Tes pages ont disparu. Il faudra enquêter pour savoir où elles sont allées.',
+  raccourci: 'Par le raccourci, tu es arrivée dans « Barils en Folie » avant tes pages.',
+  aide: 'Tu as sauvé Grignote. Pendant ce temps, tes pages ont disparu.',
 };
 
 export const BARRELS_SUMMARY: Record<BarrelsOutcome, string> = {
-  nette: 'Victoire nette : Lila est libre et tu as récupéré ta page.',
-  autrement: "Victoire « autrement » : tu as libéré le gorille au lieu de le combattre. Il devient ton allié.",
-  partielle: 'Victoire partielle : Lila est libre, mais le magicien a filé avec la page.',
-  defaite: 'Défaite : le magicien garde la page, et la boîte commence à s’effacer…',
-  fuite: 'Défaite avec fuite : tu es tombé… dans une autre boîte !',
-  abandon: 'Tu es sorti de la boîte. Le jeu reste saboté.',
+  nette: 'Victoire nette : tu as décroché ta page tout en haut.',
+  autrement: 'Victoire « autrement » : tu as décousu la pièce du gorille au lieu de le combattre. Il devient ton allié.',
+  partielle: 'Victoire partielle : tu es arrivée en haut, mais ta page avait déjà été recousue.',
+  defaite: 'Défaite : ta page reste là-haut, et la boîte commence à s’effacer…',
+  fuite: 'Défaite avec fuite : tu es tombée… dans une autre boîte !',
+  abandon: 'Tu es sortie de la boîte. Le jeu reste tel quel.',
 };

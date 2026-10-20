@@ -5,10 +5,10 @@ import { INK } from './art';
 
 export const W = 1280;
 export const H = 720;
-export const FONT = '"Trebuchet MS", "Segoe UI", Verdana, sans-serif';
+export const FONT = 'Georgia, "Palatino Linotype", "Book Antiqua", serif';
 
-export function textStyle(size: number, color = '#fff6e0'): Phaser.Types.GameObjects.Text.TextStyle {
-  return { fontFamily: FONT, fontSize: `${size}px`, color, stroke: '#1b1026', strokeThickness: Math.max(3, size / 6) };
+export function textStyle(size: number, color = '#fbeedd'): Phaser.Types.GameObjects.Text.TextStyle {
+  return { fontFamily: FONT, fontSize: `${size}px`, color, stroke: '#140a06', strokeThickness: Math.max(3, size / 6) };
 }
 
 export interface Line {
@@ -23,26 +23,50 @@ export interface Choice {
 
 const DEPTH = 1000;
 
+let portraits: Record<string, string> = {};
+
+// Associe un nom de personnage à l'image affichée à côté de ses répliques.
+export function setPortraits(map: Record<string, string>): void {
+  portraits = map;
+}
+
 // Une boîte de dialogue en bas de l'écran. Un clic (ou Espace/Entrée) fait avancer.
 export function say(scene: Phaser.Scene, lines: Line[], onDone?: () => void): void {
   let i = 0;
   const layer = scene.add.container(0, 0).setDepth(DEPTH);
   const blocker = scene.add.zone(0, 0, W, H).setOrigin(0).setInteractive();
   const panel = scene.add.graphics();
-  panel.fillStyle(0x140e22, 0.92);
+  panel.fillStyle(0x140b07, 0.93);
   panel.fillRoundedRect(40, 490, W - 80, 200, 18);
-  panel.lineStyle(4, 0xf6c945);
+  panel.lineStyle(3, 0xd9a441);
   panel.strokeRoundedRect(40, 490, W - 80, 200, 18);
-  const who = scene.add.text(72, 506, '', textStyle(26, '#f6c945'));
+  const frame = scene.add.graphics();
+  const portrait = scene.add.image(150, 590, '__DEFAULT').setVisible(false);
+  const who = scene.add.text(72, 506, '', textStyle(26, '#f2b25c'));
   const body = scene.add.text(72, 546, '', { ...textStyle(26), wordWrap: { width: W - 150 }, lineSpacing: 6 });
-  const hint = scene.add.text(W - 70, 668, '▶', textStyle(22, '#f6c945')).setOrigin(1, 1);
+  const hint = scene.add.text(W - 70, 668, '▶', textStyle(22, '#f2b25c')).setOrigin(1, 1);
   scene.tweens.add({ targets: hint, alpha: 0.2, duration: 500, yoyo: true, repeat: -1 });
-  layer.add([blocker, panel, who, body, hint]);
+  layer.add([blocker, panel, frame, portrait, who, body, hint]);
 
   const show = () => {
     const line = lines[i];
-    who.setText(line.who ?? '');
-    body.setText(line.text);
+    const key = line.who ? portraits[line.who] : undefined;
+    const hasPortrait = !!key && scene.textures.exists(key);
+    frame.clear();
+    portrait.setVisible(hasPortrait);
+    if (hasPortrait) {
+      // Portrait dans un cadre doré, à gauche du texte.
+      portrait.setTexture(key!);
+      const scale = Math.min(150 / portrait.width, 170 / portrait.height);
+      portrait.setScale(scale);
+      frame.fillStyle(0x1d120c);
+      frame.fillRoundedRect(64, 500, 172, 180, 12);
+      frame.lineStyle(3, 0xd9a441);
+      frame.strokeRoundedRect(64, 500, 172, 180, 12);
+    }
+    const x = hasPortrait ? 256 : 72;
+    who.setPosition(x, 506).setText(line.who ?? '');
+    body.setPosition(x, 546).setWordWrapWidth(W - x - 80).setText(line.text);
   };
   const next = () => {
     i++;
@@ -72,12 +96,12 @@ export function choose(scene: Phaser.Scene, prompt: Line, choices: Choice[]): vo
   const boxH = 120 + choices.length * 62;
   const y0 = H - boxH - 30;
   const panel = scene.add.graphics();
-  panel.fillStyle(0x140e22, 0.94);
+  panel.fillStyle(0x140b07, 0.94);
   panel.fillRoundedRect(40, y0, W - 80, boxH, 18);
-  panel.lineStyle(4, 0xf6c945);
+  panel.lineStyle(3, 0xd9a441);
   panel.strokeRoundedRect(40, y0, W - 80, boxH, 18);
   layer.add([blocker, panel]);
-  if (prompt.who) layer.add(scene.add.text(72, y0 + 16, prompt.who, textStyle(26, '#f6c945')));
+  if (prompt.who) layer.add(scene.add.text(72, y0 + 16, prompt.who, textStyle(26, '#f2b25c')));
   layer.add(
     scene.add.text(72, y0 + (prompt.who ? 54 : 24), prompt.text, { ...textStyle(26), wordWrap: { width: W - 150 } }),
   );
@@ -109,9 +133,9 @@ export function button(
   const bg = scene.add.graphics();
   const draw = (hover: boolean) => {
     bg.clear();
-    bg.fillStyle(hover ? 0xf6c945 : 0x2c2046, 1);
+    bg.fillStyle(hover ? 0xf2b25c : 0x2e1b12, 1);
     bg.fillRoundedRect(-width / 2, -24, width, 48, 12);
-    bg.lineStyle(3, hover ? INK : 0xf6c945);
+    bg.lineStyle(2, hover ? INK : 0xd9a441);
     bg.strokeRoundedRect(-width / 2, -24, width, 48, 12);
   };
   draw(false);
@@ -119,11 +143,11 @@ export function button(
   const hit = scene.add.zone(0, 0, width, 48).setInteractive({ useHandCursor: true });
   hit.on('pointerover', () => {
     draw(true);
-    t.setColor('#1b1026').setStroke('#f6c945', 0);
+    t.setColor('#140a06').setStroke('#f2b25c', 0);
   });
   hit.on('pointerout', () => {
     draw(false);
-    t.setColor('#fff6e0').setStroke('#1b1026', 4);
+    t.setColor('#fbeedd').setStroke('#140a06', 4);
   });
   hit.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
     ev.stopPropagation();
@@ -138,7 +162,7 @@ export function goTo(scene: Phaser.Scene, key: string, data?: object): void {
   scene.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => scene.scene.start(key, data));
 }
 
-export function banner(scene: Phaser.Scene, text: string, color = '#f6c945'): void {
+export function banner(scene: Phaser.Scene, text: string, color = '#f2b25c'): void {
   const t = scene.add
     .text(W / 2, H / 2 - 40, text, { ...textStyle(54, color), align: 'center' })
     .setOrigin(0.5)

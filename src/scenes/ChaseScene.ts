@@ -1,10 +1,10 @@
-// La poursuite du magicien entre les étagères. Plusieurs issues possibles.
+// La poursuite des pages envolées entre les étagères. Plusieurs issues possibles.
 
 import Phaser from 'phaser';
-import { COLORS, INK } from '../systems/art';
+import { BOX_COLORS, COLORS, motes } from '../systems/art';
 import { Controls } from '../systems/controls';
 import { addAlly, addPage, save, state, type ChaseOutcome, type Sabotage } from '../systems/state';
-import { HERO, MAGICIAN, RAT } from '../systems/story';
+import { HERO, RAT } from '../systems/story';
 import { H, W, banner, choose, goTo, say, textStyle } from '../systems/ui';
 
 const GROUND = 600;
@@ -35,7 +35,8 @@ export class ChaseScene extends Phaser.Scene {
   private controls!: Controls;
   private bg!: Phaser.GameObjects.TileSprite;
   private hero!: Phaser.GameObjects.Image;
-  private mage!: Phaser.GameObjects.Image;
+  // L'essaim de pages qui s'enfuit ; le codeur reste invisible.
+  private mage!: Phaser.GameObjects.Container;
   private gapBar!: Phaser.GameObjects.Graphics;
   private lostText!: Phaser.GameObjects.Text;
   private obstacles: Obstacle[] = [];
@@ -78,18 +79,31 @@ export class ChaseScene extends Phaser.Scene {
     this.makeBackground();
     this.bg = this.add.tileSprite(0, 0, W, GROUND + 30, 'chase-bg').setOrigin(0);
     const g = this.add.graphics();
-    g.fillStyle(COLORS.floor);
+    // Parquet sombre et long tapis rouge.
+    g.fillStyle(0x24140c);
     g.fillRect(0, GROUND, W, H - GROUND);
-    g.lineStyle(4, INK);
-    g.lineBetween(0, GROUND, W, GROUND);
+    g.fillStyle(COLORS.carpet);
+    g.fillRect(0, GROUND + 14, W, 70);
+    g.lineStyle(4, COLORS.cream, 0.5);
+    g.lineBetween(0, GROUND + 20, W, GROUND + 20);
+    g.lineBetween(0, GROUND + 78, W, GROUND + 78);
+    this.add.image(0, 0, 'vignette').setOrigin(0).setDepth(40);
+    motes(this, 14, 41);
 
-    this.hero = this.add.image(HERO_X, GROUND, 'hero').setOrigin(0.5, 1).setScale(1.4).setDepth(10);
-    this.mage = this.add.image(HERO_X + this.gap, GROUND, 'magician').setOrigin(0.5, 1).setScale(1.1).setDepth(9);
+    this.hero = this.add.image(HERO_X, GROUND, 'hero').setOrigin(0.5, 1).setScale(0.95).setDepth(10);
+    this.mage = this.add.container(HERO_X + this.gap, GROUND - 90).setDepth(9);
+    const glow = this.add.image(0, 0, 'glow').setScale(1.6).setTint(0xbfe9ff).setAlpha(0.35).setBlendMode(Phaser.BlendModes.ADD);
+    this.mage.add(glow);
+    for (let i = 0; i < 6; i++) {
+      const p = this.add.image(Phaser.Math.Between(-40, 40), Phaser.Math.Between(-40, 40), 'page').setScale(0.8);
+      this.tweens.add({ targets: p, angle: { from: -40, to: 40 }, y: p.y - 14, duration: 300 + i * 70, yoyo: true, repeat: -1 });
+      this.mage.add(p);
+    }
 
     this.gapBar = this.add.graphics().setDepth(50);
-    this.add.text(24, 16, 'Distance au magicien', textStyle(22)).setDepth(50);
+    this.add.text(24, 16, 'Distance à tes pages', textStyle(22)).setDepth(50);
     this.lostText = this.add
-      .text(W - 30, GROUND - 160, 'Il s’éloigne !', textStyle(26, '#ff7a7a'))
+      .text(W - 30, GROUND - 200, 'Elles s’éloignent !', textStyle(26, '#ff8a6a'))
       .setOrigin(1, 0.5)
       .setDepth(50)
       .setVisible(false);
@@ -107,8 +121,8 @@ export class ChaseScene extends Phaser.Scene {
     say(
       this,
       [
-        { who: MAGICIAN, text: 'Attrape-moi si tu peux, petit rangeur !' },
-        { text: 'Saute avec ESPACE (ou touche la droite de l’écran). Sprinte avec la flèche → (ou maintiens la gauche de l’écran) : tu le rattrapes plus vite, mais les obstacles arrivent plus vite aussi.' },
+        { who: HERO, text: 'Mes pages ! Revenez !' },
+        { text: 'Saute avec ESPACE (ou touche la droite de l’écran). Sprinte avec la flèche → (ou maintiens la gauche de l’écran) : tu les rattrapes plus vite, mais les obstacles arrivent plus vite aussi.' },
       ],
       () => (this.paused = false),
     );
@@ -120,28 +134,52 @@ export class ChaseScene extends Phaser.Scene {
     const g = this.make.graphics({ x: 0, y: 0 }, false);
     g.fillStyle(COLORS.night);
     g.fillRect(0, 0, W, GROUND + 30);
+    // Une travée sur deux : bibliothèque de livres, puis pile de boîtes de jeux sous une applique.
     for (let s = 0; s < 6; s++) {
       const x = s * 214;
-      g.fillStyle(COLORS.woodDark);
-      g.fillRect(x + 8, 40, 196, GROUND - 40);
-      g.lineStyle(4, INK);
-      g.strokeRect(x + 8, 40, 196, GROUND - 40);
-      for (let row = 0; row < 5; row++) {
-        const y = 60 + row * 106;
-        let bx = x + 16;
-        while (bx < x + 190) {
-          const bw = rnd.between(10, 20);
-          const bh = rnd.between(50, 86);
-          g.fillStyle(rnd.pick([0xd8414f, 0x3fa7d6, 0xf6c945, 0x59cd90, 0xee8434, 0xb06cff]));
-          g.fillRect(bx, y + 92 - bh, bw, bh);
-          g.lineStyle(2, INK);
-          g.strokeRect(bx, y + 92 - bh, bw, bh);
-          bx += bw + 2;
+      if (s % 2 === 0) {
+        g.fillStyle(COLORS.woodDark);
+        g.fillRect(x + 8, 30, 196, GROUND - 30);
+        for (let row = 0; row < 5; row++) {
+          const y = 50 + row * 104;
+          let bx = x + 16;
+          while (bx < x + 190) {
+            const bw = rnd.between(10, 20);
+            const bh = rnd.between(50, 86);
+            g.fillStyle(rnd.pick([0x7e2a20, 0x22284a, 0x3f6b4a, 0x6b4a1f, 0x3a2457, 0x8c5532]));
+            g.fillRect(bx, y + 92 - bh, bw, bh);
+            g.fillStyle(COLORS.gold, 0.45);
+            g.fillRect(bx + 2, y + 92 - bh + 6, bw - 4, 2);
+            bx += bw + 2;
+          }
+          g.fillStyle(COLORS.wood);
+          g.fillRect(x + 8, y + 92, 196, 10);
         }
-        g.fillStyle(COLORS.wood);
-        g.fillRect(x + 8, y + 92, 196, 10);
+      } else {
+        // Applique et halo chaud.
+        for (let r = 90; r > 0; r -= 6) {
+          g.fillStyle(COLORS.amber, 0.018);
+          g.fillCircle(x + 107, 150, r);
+        }
+        g.fillStyle(COLORS.lamp);
+        g.fillEllipse(x + 107, 150, 16, 20);
+        g.fillStyle(COLORS.gold);
+        g.fillRect(x + 104, 160, 6, 18);
+        let y = GROUND + 10;
+        for (let i = 0; i < 8; i++) {
+          const w = rnd.between(130, 180);
+          const h = rnd.between(34, 46);
+          y -= h;
+          const bx = x + 107 - w / 2 + rnd.between(-6, 6);
+          g.fillStyle(BOX_COLORS[rnd.between(0, BOX_COLORS.length - 1)]);
+          g.fillRect(bx, y, w, h - 3);
+          g.lineStyle(1.5, COLORS.gold, 0.7);
+          g.strokeRect(bx + 5, y + 5, w - 10, h - 13);
+        }
       }
     }
+    g.fillStyle(0x000000, 0.25);
+    g.fillRect(0, 0, W, GROUND + 30);
     g.generateTexture('chase-bg', W + 4, GROUND + 30);
     g.destroy();
   }
@@ -164,7 +202,9 @@ export class ChaseScene extends Phaser.Scene {
     this.heroY = Math.min(GROUND, this.heroY + this.vy * dt);
     if (this.heroY >= GROUND) this.vy = 0;
     this.hero.y = this.heroY;
-    this.hero.setAngle(this.heroY < GROUND ? -10 : Math.sin(this.elapsed * 22) * 6);
+    this.hero.setAngle(this.heroY < GROUND ? -10 : Math.sin(this.elapsed * 22) * 4);
+    // Course image par image, comme une poupée animée en stop-motion.
+    this.hero.setTexture(this.heroY < GROUND || Math.floor(this.elapsed * 8) % 2 ? 'hero' : 'hero-walk');
 
     // Obstacles.
     this.nextSpawn -= dt;
@@ -192,12 +232,12 @@ export class ChaseScene extends Phaser.Scene {
       return true;
     });
 
-    // Le magicien prend de l'avance, sauf si on sprinte. Avant le carrefour, il reste juste hors de portée.
+    // Les pages prennent de l'avance, sauf si on sprinte. Avant le carrefour, elles restent juste hors de portée.
     this.gap += (sprint ? -24 : 8) * dt;
     this.gap = Phaser.Math.Clamp(this.gap, this.forkDone ? 0 : 110, 1100);
     this.hero.setScale(1.4 * (sprint ? 1.05 : 1), 1.4);
     this.mage.x = Math.min(HERO_X + this.gap, W + 120);
-    this.mage.y = GROUND + Math.sin(this.elapsed * 10) * 4;
+    this.mage.y = GROUND - 90 + Math.sin(this.elapsed * 4) * 18;
     this.lostText.setVisible(this.gap > 760);
     this.drawGap();
 
@@ -230,7 +270,7 @@ export class ChaseScene extends Phaser.Scene {
     if (hit) {
       this.shortcut = 'failed';
       this.gap += 220;
-      banner(this, 'Patatras !', '#ff7a7a');
+      banner(this, 'Patatras !', '#ff8a6a');
       this.bg.clearTint();
       return;
     }
@@ -250,7 +290,7 @@ export class ChaseScene extends Phaser.Scene {
     this.tweens.add({ targets: stack, angle: { from: -8, to: 8 }, duration: 160, yoyo: true, repeat: -1 });
     choose(this, { who: RAT, text: `Au secours ${HERO} ! La pile de boîtes va me tomber dessus !` }, [
       {
-        label: `Aider ${RAT} (le magicien va s'échapper)`,
+        label: `Aider ${RAT} (tes pages vont s'échapper)`,
         onPick: () => {
           addAlly(RAT);
           this.tweens.killTweensOf(stack);
@@ -265,7 +305,7 @@ export class ChaseScene extends Phaser.Scene {
           this.tweens.killTweensOf(stack);
           this.tweens.add({ targets: stack, y: GROUND, angle: 80, duration: 300 });
           this.tweens.add({ targets: [rat, stack], x: '-=1400', duration: 3200 });
-          say(this, [{ who: RAT, text: 'AÏE ! Tu me le paieras, Pico !' }], () => (this.paused = false));
+          say(this, [{ who: RAT, text: 'AÏE ! Tu me le paieras, Nella !' }], () => (this.paused = false));
         },
       },
     ]);
@@ -274,7 +314,7 @@ export class ChaseScene extends Phaser.Scene {
   private forkEvent(): void {
     this.forkDone = true;
     this.paused = true;
-    choose(this, { who: HERO, text: "Il tourne au coin du rayon ! Je pourrais couper par le haut des étagères…" }, [
+    choose(this, { who: HERO, text: "Elles tournent au coin du rayon ! Je pourrais couper par le haut des étagères…" }, [
       {
         label: 'Prendre le raccourci par le haut (risqué)',
         onPick: () => {
@@ -311,16 +351,16 @@ export class ChaseScene extends Phaser.Scene {
     save();
 
     const titles: Record<ChaseOutcome, string> = {
-      rattrape: 'Rattrapé ! Une page !',
+      rattrape: 'Une page attrapée !',
       presque: 'Presque !',
-      plonge: 'Il a plongé dans une boîte !',
+      plonge: 'Elles plongent dans une boîte !',
       perdu: 'Perdu de vue…',
-      raccourci: 'Tu es arrivé avant lui !',
+      raccourci: 'Tu es arrivée la première !',
       aide: `${RAT} est sauvé !`,
     };
     banner(this, titles[outcome]);
     if (outcome === 'rattrape') {
-      const p = this.add.image(this.mage.x, GROUND - 80, 'page').setDepth(20);
+      const p = this.add.image(this.mage.x, this.mage.y, 'page').setDepth(20);
       this.tweens.add({ targets: p, x: HERO_X, y: GROUND - 120, angle: 360, duration: 700 });
     }
     this.time.delayedCall(1900, () => goTo(this, 'hub', { from: 'chase' }));
@@ -332,11 +372,11 @@ export class ChaseScene extends Phaser.Scene {
     g.fillStyle(0x140e22, 0.85);
     g.fillRoundedRect(20, 48, 360, 26, 10);
     const ratio = Phaser.Math.Clamp(1 - this.gap / 900, 0, 1);
-    g.fillStyle(ratio > 0.6 ? 0x59cd90 : ratio > 0.3 ? 0xf6c945 : 0xd8414f);
+    g.fillStyle(ratio > 0.6 ? 0x7fd6a0 : ratio > 0.3 ? 0xf2b25c : 0xc0392b);
     g.fillRoundedRect(24, 52, 352 * ratio, 18, 8);
     // Temps restant.
     const left = Math.max(0, DURATION - this.elapsed);
-    g.fillStyle(0xf6c945);
+    g.fillStyle(0xf2b25c);
     g.fillRect(20, 80, 360 * (left / DURATION), 4);
   }
 }

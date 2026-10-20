@@ -1,10 +1,11 @@
-// « Barils en Folie » : l'hommage à un classique de l'arcade, saboté par le magicien.
+// « Barils en Folie » : l'hommage à un classique de l'arcade, « corrigé » par un sceau magique.
+// Le codeur ne se montre jamais : on ne voit que son sceau, ses pièces cousues et ses messages.
 
 import Phaser from 'phaser';
 import { COLORS, INK } from '../systems/art';
 import { Controls } from '../systems/controls';
 import { addPage, save, state, type BarrelsOutcome } from '../systems/state';
-import { FIANCEE, HERO, MAGICIAN, RAT } from '../systems/story';
+import { RAT } from '../systems/story';
 import { H, W, banner, button, goTo, say, textStyle } from '../systems/ui';
 
 interface Girder {
@@ -56,13 +57,14 @@ const TIME_LIMIT = 120;
 const START = { x: 70, on: 0 };
 
 const SETTINGS = {
-  leger: { every: 3.0, speed: 190, intro: "Le magicien n'a pas eu le temps de tout saboter." },
-  normal: { every: 2.2, speed: 225, intro: 'Le magicien a saboté le jeu.' },
-  fort: { every: 1.5, speed: 265, intro: 'Le magicien est furieux : il a TOUT saboté !' },
-  piege: { every: 3.3, speed: 175, intro: 'Tu es arrivé avant lui : il est tombé dans ton piège et il est tout étourdi !' },
+  leger: { every: 3.0, speed: 190, intro: 'Le sceau vient à peine d’apparaître : le jeu est presque normal.' },
+  normal: { every: 2.2, speed: 225, intro: 'Le sceau a réécrit une partie du jeu.' },
+  fort: { every: 1.5, speed: 265, intro: 'Le sceau est déchaîné : il a TOUT réécrit !' },
+  piege: { every: 3.3, speed: 175, intro: 'Tu es arrivée avant le sceau : il n’est pas encore bien réveillé.' },
 };
 
-const TAUNTS = ['Tiens, un baril de plus !', 'Code de triche : barils infinis !', 'Tu ne retrouveras jamais tes pages !', 'Ha ha ha !'];
+// Les « messages » du sceau : des bribes de console, que Nella ne comprend pas encore.
+const TAUNTS = ['Anomalie détectée.', 'Correction en cours…', 'Recherche de l’erreur n° 0…', 'Patch appliqué.'];
 
 function yAt(g: Girder, x: number): number {
   return g.y1 + ((x - g.x1) / (g.x2 - g.x1)) * (g.y2 - g.y1);
@@ -96,7 +98,8 @@ export class BarrelsScene extends Phaser.Scene {
   private lives = 3;
   private timeLeft = TIME_LIMIT;
   private hammer = 0;
-  private hasScroll = false;
+  private hasScissors = false;
+  private topPage?: Phaser.GameObjects.Image;
   private gorillaState: 'captif' | 'libre' | 'battu' = 'captif';
   private gorillaX = 640;
   private gorillaDir = 1;
@@ -124,7 +127,7 @@ export class BarrelsScene extends Phaser.Scene {
     this.lives = 3 + (s.allies.includes(RAT) ? 1 : 0);
     this.timeLeft = TIME_LIMIT;
     this.hammer = 0;
-    this.hasScroll = false;
+    this.hasScissors = false;
     this.gorillaState = s.barrels.gorilla;
     this.gorillaHits = 0;
     this.gorillaStun = 0;
@@ -142,24 +145,27 @@ export class BarrelsScene extends Phaser.Scene {
     this.drawLevel();
 
     if (!this.replay) {
-      this.mage = this.add.image(150, yAt(GIRDERS[4], 150), 'magician').setOrigin(0.5, 1).setScale(0.95);
+      this.mage = this.add.image(150, yAt(GIRDERS[4], 150), 'sigillo').setOrigin(0.5, 1);
       if (s.sabotage === 'piege') this.tweens.add({ targets: this.mage, angle: { from: -12, to: 12 }, duration: 500, yoyo: true, repeat: -1 });
-      this.add.image(600, 95, 'lila').setOrigin(0.5, 1).setScale(1.2);
+      else this.tweens.add({ targets: this.mage, scale: 1.08, duration: 700, yoyo: true, repeat: -1 });
+      // La page de Nella, épinglée tout en haut par une punaise rouge.
+      this.topPage = this.add.image(600, 70, 'page').setScale(1.3).setDepth(30);
+      this.add.image(600, 52, 'pin').setDepth(31);
     } else {
-      // Le magicien est parti, mais son chapeau enchanté continue de lancer des barils.
-      this.mage = this.add.image(150, yAt(GIRDERS[4], 150), 'hat').setOrigin(0.5, 1).setScale(1.3);
+      // Le jeu est « réparé », mais un écho du sceau lance encore des barils.
+      this.mage = this.add.image(150, yAt(GIRDERS[4], 150), 'sigillo').setOrigin(0.5, 1).setAlpha(0.45);
     }
-    this.bubble = this.add.text(150, 50, '', textStyle(20, '#f6c945')).setOrigin(0.5).setDepth(60);
+    this.bubble = this.add.text(150, 50, '', textStyle(20, '#f2b25c')).setOrigin(0.5).setDepth(60);
 
     if (this.gorillaState === 'captif') {
       this.gorilla = this.add.image(this.gorillaX, yAt(GIRDERS[2], this.gorillaX), 'gorilla').setOrigin(0.5, 1).setScale(0.9);
     }
 
     this.addItem('hammer', 1, 700);
-    this.addItem('scroll', 3, 1150);
+    this.addItem('scissors', 3, 1150);
     if (!state().barrels.secret) this.addItem('cartridge', 4, 1110);
 
-    this.hero = this.add.image(0, 0, 'hero').setOrigin(0.5, 1).setDepth(40);
+    this.hero = this.add.image(0, 0, 'hero').setOrigin(0.5, 1).setScale(0.5).setDepth(40);
     this.hammerSprite = this.add.image(0, 0, 'hammer').setDepth(41).setVisible(false);
     this.respawn();
 
@@ -173,11 +179,11 @@ export class BarrelsScene extends Phaser.Scene {
     }
 
     const lines = this.replay
-      ? [{ text: 'Le magicien est parti, mais son chapeau enchanté lance encore des barils. Atteins le sommet !' }]
+      ? [{ text: 'Le jeu a l’air réparé, mais un écho du sceau lance encore des barils. Atteins le sommet !' }]
       : [
-          { who: MAGICIAN, text: `Tiens, tiens… ${HERO} ! J'ai jeté le gorille de ce jeu et j'ai pris sa place. Et j'ai emmené ${FIANCEE} !` },
+          { text: 'Quelque chose a jeté le gorille hors de sa place. Là-haut, un sceau de cire violette lance les barils à sa place.' },
           { text: this.settings.intro },
-          { text: `Rejoins ${FIANCEE} tout en haut. Le gorille garde le passage : combats-le avec le marteau… ou trouve un moyen de le libérer de son collier.` },
+          { text: 'Ta page est épinglée tout en haut. Le gorille garde le passage, une pièce de tissu cousue sur la poitrine : combats-le avec le marteau… ou trouve de quoi la découdre.' },
           { text: 'Flèches (ou ZQSD) pour bouger, ↑ / ↓ sur les échelles, ESPACE pour sauter.' },
         ];
     say(this, lines, () => (this.paused = false));
@@ -186,9 +192,24 @@ export class BarrelsScene extends Phaser.Scene {
   // ---------- décor ----------
 
   private drawLevel(): void {
+    // On est À L'INTÉRIEUR d'une boîte de jeu : fond d'écran d'arcade, cadre doré de la boîte autour.
     const g = this.add.graphics();
-    g.fillStyle(0x0d0a18);
+    g.fillStyle(0x120c1e);
     g.fillRect(0, 0, W, H);
+    const rnd = new Phaser.Math.RandomDataGenerator(['barils']);
+    for (let i = 0; i < 70; i++) {
+      g.fillStyle(rnd.pick([COLORS.lamp, COLORS.teal, COLORS.magic]), rnd.realInRange(0.15, 0.5));
+      g.fillCircle(rnd.between(0, W), rnd.between(0, H), rnd.realInRange(0.8, 2));
+    }
+    const frame = this.add.graphics().setDepth(56);
+    frame.lineStyle(10, COLORS.woodDark);
+    frame.strokeRect(5, 5, W - 10, H - 10);
+    frame.lineStyle(3, COLORS.gold, 0.8);
+    frame.strokeRect(14, 14, W - 28, H - 28);
+    // Lignes d'écran cathodique, très discrètes.
+    const scan = this.add.graphics().setDepth(55);
+    scan.fillStyle(0x000000, 0.12);
+    for (let y = 0; y < H; y += 4) scan.fillRect(0, y, W, 1);
     // Les échelles d'abord, pour qu'elles passent derrière les poutres.
     for (const l of LADDERS) {
       const top = yAt(GIRDERS[l.upper], l.x);
@@ -223,8 +244,8 @@ export class BarrelsScene extends Phaser.Scene {
       }
     }
     // Le trou mystérieux en bas.
-    this.add.text(595, 600, '?', textStyle(48, '#b06cff')).setOrigin(0.5);
-    this.add.text(595, 712, 'vers une autre boîte…', textStyle(14, '#b06cff')).setOrigin(0.5, 1);
+    this.add.text(595, 600, '?', textStyle(48, '#b48cff')).setOrigin(0.5);
+    this.add.text(595, 712, 'vers une autre boîte…', textStyle(14, '#b48cff')).setOrigin(0.5, 1);
   }
 
   private addItem(key: string, on: number, x: number): void {
@@ -325,10 +346,11 @@ export class BarrelsScene extends Phaser.Scene {
     this.hero.setPosition(this.px, this.py).setFlipX(this.facing < 0);
     const walking = this.on >= 0 && this.vx !== 0;
     this.hero.setAngle(walking ? Math.sin(this.time.now / 60) * 6 : 0);
+    this.hero.setTexture(walking && Math.floor(this.time.now / 120) % 2 ? 'hero-walk' : 'hero');
     this.hero.setAlpha(this.invulnerable > 0 ? 0.5 : 1);
     this.hammerSprite.setVisible(this.hammer > 0);
     if (this.hammer > 0) {
-      this.hammerSprite.setPosition(this.px + this.facing * 26, this.py - 52);
+      this.hammerSprite.setPosition(this.px + this.facing * 22, this.py - 44);
       this.hammerSprite.setAngle(Math.sin(this.time.now / 70) * 70 * this.facing);
     }
   }
@@ -337,9 +359,15 @@ export class BarrelsScene extends Phaser.Scene {
     if (!this.mage || this.magicianFled) return;
     if (!this.replay && this.timeLeft <= 0) {
       this.magicianFled = true;
-      this.cameras.main.flash(300, 176, 108, 255);
-      this.bubble.setText('Trop lent ! Je file avec ta page !').setPosition(this.mage.x + 60, this.mage.y - 110);
+      this.cameras.main.flash(300, 154, 108, 255);
+      this.bubble.setText('Correction terminée.').setPosition(this.mage.x + 90, this.mage.y - 100);
       this.tweens.add({ targets: this.mage, alpha: 0, scale: 0.1, angle: 360, duration: 600 });
+      // La page est recousue : une Toppa vient se coller dessus.
+      if (this.topPage) {
+        const patch = this.add.image(this.topPage.x, this.topPage.y, 'toppa').setDepth(32).setScale(3);
+        this.tweens.add({ targets: patch, scale: 1.1, duration: 500, ease: 'Back.Out' });
+        this.tweens.add({ targets: this.topPage, alpha: 0.35, duration: 500 });
+      }
       this.time.delayedCall(2200, () => this.bubble.setText(''));
       return;
     }
@@ -352,7 +380,7 @@ export class BarrelsScene extends Phaser.Scene {
     this.tauntIn -= dt;
     if (!this.replay && this.tauntIn <= 0) {
       this.tauntIn = 8;
-      this.bubble.setText(Phaser.Utils.Array.GetRandom(TAUNTS)).setPosition(this.mage.x + 80, this.mage.y - 110);
+      this.bubble.setText(Phaser.Utils.Array.GetRandom(TAUNTS)).setPosition(this.mage.x + 90, this.mage.y - 100);
       this.time.delayedCall(2000, () => this.bubble.setText(''));
     }
   }
@@ -438,7 +466,7 @@ export class BarrelsScene extends Phaser.Scene {
     const gy = yAt(g, this.gorillaX);
     const touching = dx < 44 && this.py > gy - 55 && this.py < gy + 10;
     if (!touching) return;
-    if (this.hasScroll) {
+    if (this.hasScissors) {
       this.freeGorilla();
     } else if (this.hammer > 0 && this.gorillaStun <= 0) {
       this.gorillaHits++;
@@ -453,9 +481,9 @@ export class BarrelsScene extends Phaser.Scene {
 
   private freeGorilla(): void {
     this.gorillaState = 'libre';
-    this.hasScroll = false;
+    this.hasScissors = false;
     this.gorilla!.setTexture('gorilla-free').clearTint();
-    banner(this, 'Gorille libéré !', '#59cd90');
+    banner(this, 'Pièce décousue !', '#7fd6a0');
     this.bubble.setText('Ouh ouh ! (merci)').setPosition(this.gorillaX, yAt(GIRDERS[2], this.gorillaX) - 110);
     this.time.delayedCall(1800, () => this.bubble.setText(''));
     this.tweens.add({ targets: this.gorilla, x: 60, duration: 2500, onComplete: () => this.gorilla?.setAlpha(0.6) });
@@ -477,25 +505,25 @@ export class BarrelsScene extends Phaser.Scene {
         if (it.key === 'hammer') {
           this.hammer = 10;
           banner(this, 'Marteau ! (10 s)');
-        } else if (it.key === 'scroll') {
-          this.hasScroll = true;
-          banner(this, 'Parchemin du magicien !', '#b06cff');
+        } else if (it.key === 'scissors') {
+          this.hasScissors = true;
+          banner(this, 'Ciseaux de couturière !', '#d9a441');
           this.time.delayedCall(900, () =>
-            this.flashText('« ↑↑↓↓ : ouvre n’importe quel collier magique »'),
+            this.flashText('Touche le gorille pour découdre sa pièce.'),
           );
         } else if (it.key === 'cartridge') {
           const s = state();
           s.barrels.secret = true;
           addPage(3);
           save();
-          banner(this, 'Cartouche dorée : page secrète !', '#f6c945');
+          banner(this, 'Cartouche dorée : page secrète !', '#f2b25c');
         }
       }
     }
   }
 
   private flashText(text: string): void {
-    const t = this.add.text(W / 2, 140, text, textStyle(24, '#b06cff')).setOrigin(0.5).setDepth(80);
+    const t = this.add.text(W / 2, 140, text, textStyle(24, '#b48cff')).setOrigin(0.5).setDepth(80);
     this.tweens.add({ targets: t, alpha: 0, delay: 2200, duration: 500, onComplete: () => t.destroy() });
   }
 
@@ -506,7 +534,7 @@ export class BarrelsScene extends Phaser.Scene {
       this.end('defaite');
       return;
     }
-    banner(this, 'Aïe !', '#ff7a7a');
+    banner(this, 'Aïe !', '#ff8a6a');
     this.respawn();
   }
 
@@ -527,9 +555,9 @@ export class BarrelsScene extends Phaser.Scene {
   private drawHud(): void {
     const t = Math.max(0, Math.ceil(this.timeLeft));
     const parts = [`Vies : ${'♥'.repeat(this.lives)}`];
-    if (!this.replay) parts.push(this.magicianFled ? 'Le magicien a filé !' : `Temps : ${t}`);
+    if (!this.replay) parts.push(this.magicianFled ? 'Ta page est recousue !' : `Temps : ${t}`);
     if (this.hammer > 0) parts.push(`Marteau : ${Math.ceil(this.hammer)}`);
-    if (this.hasScroll) parts.push('Parchemin ✓');
+    if (this.hasScissors) parts.push('Ciseaux ✓');
     this.hud.setText(parts.join('    '));
   }
 
@@ -564,18 +592,17 @@ export class BarrelsScene extends Phaser.Scene {
     save();
 
     const titles: Record<BarrelsOutcome, string> = {
-      nette: `${FIANCEE} est sauvée !`,
-      autrement: `${FIANCEE} est sauvée !`,
-      partielle: `${FIANCEE} est sauvée… mais pas la page`,
+      nette: 'Page récupérée !',
+      autrement: 'Page récupérée !',
+      partielle: 'Trop tard : la page est recousue',
       defaite: 'Perdu…',
       fuite: 'Aaaaah !',
       abandon: 'Tu sors de la boîte',
     };
-    banner(this, titles[outcome], outcome === 'defaite' ? '#ff7a7a' : '#f6c945');
+    banner(this, titles[outcome], outcome === 'defaite' ? '#ff8a6a' : '#f2b25c');
     if (outcome === 'nette' || outcome === 'autrement') {
       this.mage?.setVisible(false);
-      const p = this.add.image(150, 160, 'page').setDepth(60);
-      this.tweens.add({ targets: p, x: this.px, y: this.py - 60, angle: 360, duration: 800 });
+      if (this.topPage) this.tweens.add({ targets: this.topPage, x: this.px, y: this.py - 60, angle: 360, duration: 800 });
     }
     // Rejouer une boîte déjà terminée ne relance pas le bilan dans le hub.
     const data = this.replay ? {} : { from: 'barrels', outcome };

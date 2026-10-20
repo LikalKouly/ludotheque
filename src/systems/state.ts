@@ -31,8 +31,8 @@ export interface GameState {
   prototypeEndSeen: boolean;
 }
 
-const KEY = 'ludotheque.save.v1';
-const VERSION = 1;
+const KEY = 'ludotheque.save.v2';
+const VERSION = 2;
 
 export function newState(): GameState {
   return {
